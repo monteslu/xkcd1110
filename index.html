@@ -1,32 +1,24 @@
-
 <html>
 <head>
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/> -->
-<!--	<meta name="apple-mobile-web-app-capable" content="yes" /> -->
-
+	
 	<script src="http://ajax.googleapis.com/ajax/libs/dojo/1.8.0/dojo/dojo.js"></script>
 
 	<script>
 	require([
-		'dojo/window',
 		'dojo/dom',
-		'dojo/dom-geometry',
 		'dojo/domReady!'
 		],
-	function(win, dom, domGeom){
+	function(dom){
 
-		var scale = 128;
+		var scale = 64;
 		var numN = 13;
 		var numS = 19;
 		var numE = 48;
 		var numW = 32;
 
-		var vs = win.getBox();
 		var canvas = dom.byId('canvas');
 		var context = canvas.getContext("2d");
-		var output = dom.byId('output');
 		
-		console.log(vs);
 		var canvasHeight = scale * (numN + numS);
 		var canvasWidth = scale * (numE + numW);
 		console.log('w,h',canvasWidth, canvasHeight)
@@ -105,7 +97,6 @@
 
 <body style="margin: 1px;">
 <div style="text-align: center;"><canvas id="canvas" style="border: 1px solid black;"></canvas><div>
-<div style="text-align: center;"><button id="clear">clear</button><span id="output"></span>&nbsp;&nbsp;&nbsp;<button id="screen">get image</button></div>
 </body>
 
 </html>
