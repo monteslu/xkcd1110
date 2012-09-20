@@ -8,7 +8,7 @@ Run getImages.sh to get all the images.
 
 Make a copy of them somewhere as a backup, then run something like:
 
-`mogrify --resize 64x64 *.png`
+`mogrify -resize 64x64 *.png`
 
 That will shrink them down from their original gigantic 2048x2048 size.  Copy them to an images subfolder.
 
